@@ -3,11 +3,17 @@
 <html>
 	<head><title>UNICK, unique</title></head>
 <body>
-  <script src="compiler.js">
-	  <h1>UNICK, unique.</h1>
-	  <h2>compiler</h2>
+  <script src="compiler.js"></script>
+		
+	  <h1>
+	UNICK, unique.
+	</h1>
+	  <h2>
+	compiler
+	</h2>
+	
 	</script>
-	<input type="text" name="input" style="width:1000px; height:20px; font-size:16px;"></input></br>
+	<input type="text" name="input" style="width:1000px; height:20px; font-size:16px;" placeholder="code goes here…"></input></br>
 	<button onclick="try{compiler()}catch(error){document.getElementsByName('output')[0].innerHTML = error;}">run</button>
 	<p name="output"></p>
 </body>
