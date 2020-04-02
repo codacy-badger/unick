@@ -22,7 +22,8 @@ function compiler(){
 				stack.push(stack.pop() || stack.pop());
 				break;
 			case "#":
-				result.push(stack.pop())
+				result.push(stack.pop());
+				break;
 			default:
 				throw new Error("Unidentified character: \'" + code[i] + "\', at char #" + i);
 				break;
