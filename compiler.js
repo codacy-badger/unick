@@ -5,7 +5,7 @@ function compiler(){
 	var i = 0;
 	var result = [];
 	while (i < code.length) {
-		var char = code[i]
+		var char = code[i];
 		switch (char) {
 			case "+":
 				stack.push(true);
@@ -27,7 +27,6 @@ function compiler(){
 				break;
 			default:
 				throw new Error("Unidentified character: \'" + char + "\', at char #" + (i + 1));
-				break;
 		}
 		i += 1;
 	}
