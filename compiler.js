@@ -5,7 +5,8 @@ function compiler(){
 	var i = 0;
 	var result = [];
 	while (i < code.length) {
-		switch (code[i]) {
+		var char = code[i]
+		switch (char) {
 			case "+":
 				stack.push(true);
 				break;
@@ -25,10 +26,11 @@ function compiler(){
 				result.push(stack.pop());
 				break;
 			default:
-				throw new Error("Unidentified character: \'" + code[i] + "\', at char #" + (i + 1));
+				throw new Error("Unidentified character: \'" + char + "\', at char #" + (i + 1));
 				break;
 		}
-		i += 1
+		i += 1;
 	}
-	document.getElementsByName("output")[0].innerHTML = result;
+	var dom = document.getElementsByName("output")[0];
+	dom.innerHTML = result;
 }
