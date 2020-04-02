@@ -25,7 +25,7 @@ function compiler(){
 				result.push(stack.pop());
 				break;
 			default:
-				throw new Error("Unidentified character: \'" + code[i] + "\', at char #" + i);
+				throw new Error("Unidentified character: \'" + code[i] + "\', at char #" + (i + 1));
 				break;
 		}
 		i += 1
